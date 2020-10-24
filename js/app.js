@@ -55,3 +55,37 @@ console.log(textDblank);
 var textE = 'hakuna matata'
 var textEupper = textE.substring(0, 1).toUpperCase()+textE.substring(1, textE.indexOf(' ')).toLowerCase()+' '+textE.substring(textE.indexOf(' ')+1, textE.indexOf(' ')+2).toUpperCase()+textE.substring(textE.indexOf(' ')+2, textE.length).toLowerCase();
 console.log(textEupper);
+
+
+/*
+3- Arrays
+Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log)
+Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
+Agregar un elemento al principio y al final del array (utilizar unshift y push).
+Quitar un elemento del principio y del final del array (utilizar shift y pop).
+Invertir el orden del array (utilizar reverse)
+Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
+Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
+*/
+
+var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+var monthsClone = Array.from(months);
+console.log(months[4]+' and '+months[10]);
+
+console.log(months.sort());
+
+months.unshift('Start');
+months.push('End');
+console.log(months);
+
+months.shift();
+months.pop();
+console.log(months);
+
+console.log(months.reverse());
+
+var monthsJoin = monthsClone.join(' - ');
+console.log(monthsJoin);
+
+var monthsSlice = monthsClone.slice(4, 11);
+console.log(monthsSlice);
